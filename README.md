@@ -4,7 +4,7 @@ a decentralized funding platform for social projects
 
 <img src="./img/logo-short.png" width="500"> 
 Change token 
-<img src="./img/change-token.png" width="200">
+<img src="./img/change-token-2.png" width="200">
 
 
 ## Future Improvements 
