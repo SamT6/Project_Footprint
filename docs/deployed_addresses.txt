@@ -1,0 +1,7 @@
+Ethereum Rinkeby Testnet
+
+Footprint address: 0x0A40a83eBD8142782E27a92E94dC89225bF7B4C9
+
+Decentralized Exchange address: 0xAFA48b488019c0cFd7bF9E6C866c4cfAba6C7C26
+
+Change Token address: 0x914AEd65Fb07e9e53F1d367a56b0f123173D5340

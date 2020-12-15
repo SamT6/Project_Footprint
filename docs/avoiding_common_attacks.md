@@ -1,0 +1,3 @@
+Integer Overflow and Underflow - for the Change Token contract, uses SafeMath library to checks for integer overflowing or underflowing, so that when subtracting two numbers there won't be a negative number (checking account balance), and when adding two numbers it won't exceed the maximun integer number of uint256
+
+Re-entracy Attacks - by keeping all three contracts in a closed loop (they only call one another and don't call any other third-party contracts), the platform prevents re-entracy attacks 

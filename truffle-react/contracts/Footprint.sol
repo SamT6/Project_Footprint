@@ -6,7 +6,9 @@ import "./CHGToken.sol";
 version 0.1 
 author: Samuel Tang
 */
-
+/// @title Footprint
+/// @author Samuel Tang
+///@notice Footprint, a decentralized funding platform for social projects
 contract Footprint{
     
     uint256 public number_of_projects; // total number of projects
@@ -35,7 +37,9 @@ contract Footprint{
         changeToken = CHGToken(chgAddress); 
     }
     
-    
+    /// @param topic topic of proposing project
+    /// @param name name of proposing project
+    /// @return newly created projectID
     function proposeProject(string memory topic, string memory name) public returns(uint256){
         uint256 projectID = number_of_projects++;
         projects[projectID] = Project(projectID, msg.sender, topic, name, 0);
@@ -44,6 +48,8 @@ contract Footprint{
         return projectID;
     }
     
+    /// @param uid unique id of project
+    /// @param amount amount of CHG token fund project
     function fundProject(uint256 uid, uint256 amount) public{
         // user will need to first grant access to this smart contract to transfer their token
         changeToken.transferFrom(msg.sender, projects[uid].owner, amount);
@@ -52,6 +58,8 @@ contract Footprint{
         emit LogProjectFunded(msg.sender, projects[uid].owner, projects[uid].name, amount);
     }
     
+    /// @param uid unique id of project
+    /// @return project information
     function getProject(uint256 uid) public view returns(address, string memory, string memory, uint256){
         return (projects[uid].owner, projects[uid].topic, projects[uid].name, projects[uid].valuation);
     }

@@ -16,6 +16,9 @@ interface IERC20 {
 }
 
 
+/// @title Change Token
+/// @author Samuel Tang
+///@notice Contract of CHG Token, an IERC20 token 
 contract CHGToken is IERC20 {
 
     string public constant name = "Change";
@@ -37,14 +40,20 @@ contract CHGToken is IERC20 {
         balances[msg.sender] = totalSupply_;
     }
 
+    /// @return total supply of CHG tokens
     function totalSupply() public override view returns (uint256) {
         return totalSupply_;
     }
 
+    /// @param tokenOwner token owner's address
+    /// @return tokenOwner's balance of CHG
     function balanceOf(address tokenOwner) public override view returns (uint256) {
         return balances[tokenOwner];
     }
 
+    /// @param receiver address to receive CHG
+    /// @param numTokens amount of CHG token to transfer
+    /// @return true if no errors
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
         balances[msg.sender] = balances[msg.sender].sub(numTokens);
@@ -53,16 +62,26 @@ contract CHGToken is IERC20 {
         return true;
     }
 
+    /// @param delegate address to approve access to spend on msg.sender's behalf
+    /// @param numTokens amount of approved access
+    /// @return true if no errors
     function approve(address delegate, uint256 numTokens) public override returns (bool) {
         allowed[msg.sender][delegate] = numTokens;
         emit Approval(msg.sender, delegate, numTokens);
         return true;
     }
 
+    /// @param owner token owner's address
+    /// @param delegate address of approved access to spend on owner's behalf
+    /// @return amount in CHG that the delegate is allowed to spend on owener's behalf
     function allowance(address owner, address delegate) public override view returns (uint) {
         return allowed[owner][delegate];
     }
 
+    /// @param owner token owner's address
+    /// @param buyer address to spend owner's CHG to
+    /// @param numToken amount of CHG to spend from owner to buyer
+    /// @return true if no errors
     function transferFrom(address owner, address buyer, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
