@@ -49,9 +49,12 @@ After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which 
     * vote on funding direction
     * propose new topics
 * each topic has its own mini-token \
-<img style="white-space: nowrap;" src="./img/climate-token.png" width="200">
-<img style="white-space: nowrap;" src="./img/education-token.png" width="200">
-<img style="white-space: nowrap;" src="./img/mentalhealth-token.png" width="200">
+<row> 
+<img src="./img/climate-token.png" width="200">
+<img src="./img/education-token.png" width="200">
+<img src="./img/mentalhealth-token.png" width="200">
+</row>
+
 * funders get NFT as reward and receipt for funding projects
 <img src="./img/NFT-token.png" width="200">
 * better frontend UI design 
