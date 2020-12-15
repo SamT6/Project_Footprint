@@ -38,7 +38,7 @@ After successfully deploying contracts, make sure to go to _truffle-react/client
 Deployment process: 
 After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which in its constructor deploys CHGToken.sol, then we'll take the address of CHG token and pass it as a parameter to deploy Footprint.sol
 
-## App
+## App (MVP)
 <img src="./img/app-full.png" width="700">
 
 
