@@ -3,7 +3,7 @@ a decentralized funding platform for social projects
 =================
 
 <img src="./img/logo-short.png" width="500">  \
-Footprint allows everyday people to contribute to this world in two ways, work on projects that's important to them and propose on Footprint to get financial support, or become a funder and help others achieve their goals. The platform aims to change the world for the better by hosting projects to solve important and urgent issues we face today. Education, Climate Change, Mental Health, and countless other problems that need soving.
+Footprint allows everyday people to contribute to this world in two ways, work on projects that's important to them and propose on Footprint to get financial support, or become a funder and help others achieve their goals. The platform aims to change the world for the better by hosting projects to solve important and urgent issues we face today. Education, Climate Change, Mental Health, and countless other problems that need soving.\
 Change token, or CHG, is the token on Footprint for funders to support meaningful projects. \
 <img src="./img/change-token-2.png" width="200">
 
@@ -38,6 +38,23 @@ After successfully deploying contracts, make sure to go to _truffle-react/client
 Deployment process: 
 After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which in its constructor deploys CHGToken.sol, then we'll take the address of CHG token and pass it as a parameter to deploy Footprint.sol
 
+## App
+<img src="./img/app.png" width="500">
+
+
 ## Future Improvements 
-pending projects before entering \
-multiple addresses owned project
+* project owned by multiple addresses
+* voting rights for CHG token holders
+    * vote on pending projects before entering
+    * vote on funding direction
+    * propose new topics
+* each topic has its own mini-token \
+<img src="./img/climate-token.png" width="100">
+<img src="./img/education-token.png" width="100">
+<img src="./img/mentalhealth-token.png" width="100">
+* funders get NFT as reward and receipt for funding projects
+<img src="./img/NFT-token.png" width="100">
+* better frontend UI design 
+    * use the template in resources folder
+
+
