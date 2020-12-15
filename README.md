@@ -19,7 +19,7 @@ Change token, or CHG, is the token on Footprint for funders to support meaningfu
 * DEX.sol - decentralized exchange of ETH anf CHG
 
 Interaction between contracts:\
-<img src="./img/interaction.png" width="500">
+<img src="./img/interaction.png" width="700">
 
 
 ## Run Project Locally
@@ -39,7 +39,7 @@ Deployment process:
 After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which in its constructor deploys CHGToken.sol, then we'll take the address of CHG token and pass it as a parameter to deploy Footprint.sol
 
 ## App
-<img src="./img/app.png" width="500">
+<img src="./img/app-full.png" width="700">
 
 
 ## Future Improvements 
