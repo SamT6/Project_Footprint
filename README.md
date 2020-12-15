@@ -3,27 +3,40 @@ a decentralized funding platform for social projects
 =================
 
 <img src="./img/logo-short.png" width="500">  \
-Change token, or CHG, is the currency on Footprint for funders to support meaningful projects  \
+Footprint allows everyday people to contribute to this world in two ways, work on projects that's important to them and propose on Footprint to get financial support, or become a funder and help others achieve their goals. The platform aims to change the world for the better by hosting projects to solve important and urgent issues we face today. Education, Climate Change, Mental Health, and countless other problems that need soving.
+Change token, or CHG, is the token on Footprint for funders to support meaningful projects. \
 <img src="./img/change-token-2.png" width="200">
 
 ## Directory Structure
-* truffle-react - main directory, from truffle react box, contains all three contracts, frontend react
+* truffle-react - main directory, from truffle react box, contains all three contracts, frontend react code (under client folder)
 * docs - documents on design pattern, security methods, and contract address  
 * img - images of projects (project logo, token logo, screenshots)
-* resources
+* resources - learning material, better UI template,  future reference
 
 ## Contracts
-* Footprint.sol
-* CHGToken.sol 
-* DEX.sol
+* Footprint.sol - platform for proposing and funding projects
+* CHGToken.sol - CHG token 
+* DEX.sol - decentralized exchange of ETH anf CHG
 
 Interaction between contracts:\
 <img src="./img/interaction.png" width="500">
 
 
+## Run Project Locally
+### React 
+Under _truffle-react/client directory_,
+run ``` npm install ``` to get all necessary dependencies,
+then run ``` npm start ``` to start local host server
 
-## Truffle
+### Truffle (if re-deploying contracts)
+Under _truffle-react_ directory,
+run ``` truffle compile ``` to compile contracts,
+then run ``` truffle migrate --network rinkeby --reset ``` to deploy contracts to Ethereum rinkeby testnet,
+optionally, run ``` truffle test ``` to run test cases on contracts (defined under _truffle-react/test_).
+After successfully deploying contracts, make sure to go to _truffle-react/client/src/contracts_ to get all contracts abi and address information and put into _abi.js_ 
+
 Deployment process: 
+After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which in its constructor deploys CHGToken.sol, then we'll take the address of CHG token and pass it as a parameter to deploy Footprint.sol
 
 ## Future Improvements 
 pending projects before entering \
