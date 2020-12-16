@@ -43,11 +43,14 @@ After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which 
 
 
 ## Future Improvements 
+* better frontend UI design 
+    * use the template in resources folder
 * project owned by multiple addresses
 * voting rights for CHG token holders
     * vote on pending projects before entering
     * vote on funding direction
     * propose new topics
+* put project details on IPFS
 * each topic has its own mini-token
 
 <p float="left">
@@ -59,7 +62,6 @@ After running ``` truffle migrate ```, truffle will deploy DEX.sol first, which 
 * funders get NFT as reward and receipt for funding projects
 <img src="./img/NFT-token.png" width="200">
 
-* better frontend UI design 
-    * use the template in resources folder
+
 
 
